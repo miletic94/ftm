@@ -1,0 +1,31 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.navButton {
+  background-color: transparent;
+  border: none;
+  padding: 1em;
+  margin: 1em;
+}
+
+/*Make anmation*/
+.navLink {
+  color: black;
+  text-decoration: none;
+  font-family: "Arial, Poppers";
+  color: white;
+  font-size: 24px;
+}
+
+.navLink:hover {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.activeLink {
+  text-decoration: underline;
+  font-size: 26px;
+}

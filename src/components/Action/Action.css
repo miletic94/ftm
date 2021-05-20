@@ -3,4 +3,63 @@
   text-align: right;
   align-items: center;
   margin-top: 10%;
+  animation: fade-in 6s;
+}
+
+.booking {
+  display: none;
+  padding-left: 10%;
+  margin-top: 10%;
+  align-items: center;
+  animation: fade-in 6s;
+}
+
+.buttonContainer {
+  position: absolute;
+  display: flex;
+  margin-top: 10px;
+  border: solid;
+  transition: all ease-out;
+}
+
+.actionButton {
+  margin-left: 19.56%;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    display: none;
+  }
+  to {
+    opacity: 0;
+    display: flex;
+  }
+}
+
+@keyframes move-right {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(638px) translate(-195%);
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translate(638px) translate(-195%);
+  }
+  100% {
+    transform: translate(0);
+  }
 }

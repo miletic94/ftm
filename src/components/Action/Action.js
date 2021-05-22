@@ -16,25 +16,29 @@ export default function Action() {
     const bookingStyle = useRef()
     const actionButtonContainer = useRef()
     const actionButton = useRef()
+    const animationContainer = useRef()
 
     const [displayAction, setDisplayAction] = useState(true) 
-    console.log()
+    
     function changeDisplay() {
         setDisplayAction(prevDisplayAction => {
             if(prevDisplayAction) {
                 actionStyle.current.style.display="none"
                 bookingStyle.current.style.display="flex"
+                actionButtonContainer.current.style.animation = "move-down 3s forwards"
                 actionButton.current.style.animation = "move-left 3s forwards"
+                console.log(actionButtonContainer.current.getAnimations())
                 return false
             }
             actionStyle.current.style.display="flex"
             bookingStyle.current.style.display="none"
+            actionButtonContainer.current.style.animation = "move-up 3s forwards"
             actionButton.current.style.animation = "move-right 3s forwards"
             return true
         })
     }
     return (
-        <>
+        <div class="animationContainer" ref={animationContainer}>
             <div ref={actionStyle} class="action" >
                 <div class="sectionHalf">
                     <h1>Feel The Music</h1>
@@ -59,7 +63,6 @@ export default function Action() {
             <div class="buttonContainer sectionHalf" ref={actionButtonContainer}>
                 <button class="btn actionButton" ref={actionButton} onClick={changeDisplay}>Book now</button>
             </div>
-
-        </>        
+        </div>    
     )
 }

@@ -53,11 +53,11 @@ h6 {
   border: none;
   border-radius: 10%;
   font-size: 20px;
-  line-height: 30px;
 }
 .btn:hover {
-  padding: 12px 22px 12px 22px;
   cursor: pointer;
+  background-color: #003b94;
+  box-shadow: 3px 1px 5px 1px #002b74;
 }
 
 .sectionHalf {

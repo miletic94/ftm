@@ -1,3 +1,9 @@
+.animationContainer {
+  /*  border: solid green; */
+  position: relative;
+  height: 70%;
+}
+
 .action {
   display: flex;
   text-align: right;
@@ -16,14 +22,18 @@
 
 .buttonContainer {
   position: absolute;
+  top: 45%;
+  left: 0;
   display: flex;
-  margin-top: 10px;
-  border: solid;
-  transition: all ease-out;
+  align-items: flex-end;
+  transform: translateY(0);
+  /*border: solid;*/
 }
 
 .actionButton {
   margin-left: 19.56%;
+
+  transform: translate(638px) translate(-200%);
 }
 
 @keyframes fade-in {
@@ -51,15 +61,33 @@
     transform: translate(0);
   }
   100% {
-    transform: translate(638px) translate(-195%);
+    transform: translate(638px) translate(-200%);
   }
 }
 
 @keyframes move-left {
   0% {
-    transform: translate(638px) translate(-195%);
+    transform: translate(638px) translate(-200%);
   }
   100% {
     transform: translate(0);
+  }
+}
+
+@keyframes move-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(140%);
+  }
+}
+
+@keyframes move-up {
+  from {
+    transform: translateY(140%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
